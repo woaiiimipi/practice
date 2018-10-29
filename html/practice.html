@@ -2,18 +2,23 @@
 <html>
 
 <head>
-  <title>練習頁面</title>
+  <title>个人主页</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
-  <div id="logo">
-    <a href="index.html" target="myFrame">
-      <img src="../img/grapecity.png" alt="logo">
-    </a>
-  </div>
+
   <nav>
+    <div id="logo">
+      <a href="index.html" target="myFrame">
+        <img src="../img/grapecity.png" alt="logo">
+      </a>
+    </div>
+    <div id="searchdiv">
+      <input type="search">
+      <input type="button" value="搜索">
+    </div>
     <ul>
       <li>
         <a href="personInfo.html" target="myFrame">
@@ -32,13 +37,11 @@
       </li>
     </ul>
   </nav>
-
   <hr>
   <br>
   <div id="main">
-    <iframe name="myFrame" src="index.html" frameborder="0" scrolling = "no"></iframe>
+    <iframe name="myFrame" src="index.html" frameborder="0" scrolling="no"></iframe>
   </div>
-
 </body>
 
 </html>

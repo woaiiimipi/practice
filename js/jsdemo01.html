@@ -1,0 +1,257 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <input type="button" id="btn" value="click me!">
+        <script>
+            // alert("hello js!");
+            // var name = "xl";
+            // alert(typeof name);
+            // var mix = Number.MIN_VALUE;
+            // alert(mix);
+            // var max = Number.MAX_VALUE;
+            // alert(max);
+            
+            // if(0.1 + 0.2 == 0.3){
+            //     alert("you got 0.3");
+            // }else{
+            //     alert("not equils!");
+            // }
+            // alert(NaN == NaN);
+            // alert(isNaN("10"));
+            // alert("parse(\"\") :"+parseInt(""));
+            // var num = ~18;
+            // alert(num.toString(2));
+
+            // function fun1(){
+            //     alert(arguments[0] + arguments[1] +arguments[2]);
+            // }
+            // fun1(1,2,"3");
+
+            // var obj = new Object();
+            // obj.name = "bool";
+            // alert(obj.name);
+
+            // var obj = new Object();
+            // obj.name = "xl";
+            // function fun1(obj){
+            //     obj.name = "qj";
+            //     obj = new Object();
+            //     obj.name = "hh";
+            // }
+            // fun1(obj);
+            // alert(obj.name);
+
+            // if(true){
+            //     var num = 123;
+            // }
+            // alert(num);
+            //栈操作和队列操作
+            // var colors = new Array();
+            // colors.push("1");
+            // colors.push("2","3");
+            // colors.push("4");
+            // alert(colors.valueOf());
+            // alert(colors.shift());
+            // alert(colors.shift());
+            // alert(colors.shift());
+            // alert(colors.shift());
+            //compare的使用
+            // function compare(value1,value2){
+            //     return value1 - value2;
+            // }
+            // var values = [1,3,2,5,6,10];
+            // values.sort(compare);
+            // alert(values);
+            //cancat的使用
+            // var colors = ["pink"];
+            // colors =  colors.concat("blue");
+            // alert(colors);
+            //splice的使用
+            // var num = [1,2,3];
+            // var removed = num.splice(0,1);
+            // alert(removed);
+            // alert(num);
+            //map的使用
+            // var changed = num.map(function(item,index,array){
+            //     return item * 2;
+            // });
+            // alert(changed);
+            //
+            //reduce的使用
+            // var sum = [1,2,3,4];
+            // var newArray = sum.reduceRight(function(prev,cur,index,array){
+            //     return prev/cur;
+            // });
+            // alert(newArray);
+            //Date的使用
+            // var date = Date.now();
+            // alert(date.toString());
+            //callee的使用
+            // function f1(num){
+            //     if(num < 1){
+            //         return 1;
+            //     }
+            //     return num *arguments.callee(num - 1);
+            // }
+            // var newFun = f1;
+            // f1 = function(num){
+            //     return 0;
+            // }
+            // alert(f1(3));
+            //this的使用
+            // window.color = "red";
+            // function sayColor(){
+            //     alert(this.color);
+            // }
+            // var obj = {
+            //     color :"blue"
+            //     // name : "bob",
+            //     // sex : "male"
+            // }
+            // obj.sayColor = sayColor;
+            // sayColor();
+            // obj.sayColor();
+            
+            //caller的使用
+            // function outer(){
+            //     inner();
+            // }
+            // function inner(){
+            //     alert(arguments.callee.caller);
+            // }
+            // outer();
+            
+            //callee的使用
+            // var outF = function(){
+            //     innerF();
+            // }
+            // var innerF = function(){
+            //     alert("arguments.callee; "+arguments.callee)
+            //     alert("innerF.caller; "+innerF.caller);
+            //     alert("arguments.callee: "+arguments.caller);
+            // }
+            // outF();
+
+            //bind的使用
+            // window.color = "blue";
+            // var o = {color:"red"};
+            // var fun1 = function(){
+            //     alert(this.color);
+            // }
+            // var fun2 = fun1.bind(o);
+            // fun2();
+
+            //instanceof使用
+            // var obj = new Object("222");
+            // alert(obj instanceof String);
+            // var obj1 = new Object(222);
+            // alert(obj1 instanceof Number);
+            // var obj2 = new Object(true);
+            // alert(obj2 instanceof Boolean);
+
+            //原型链继承
+            // //父类
+            // function SuperType(){
+            //     this.property = true;
+            // }
+            // SuperType.prototype.getSuperValue = function(){
+            //     return this.property;
+            // }
+            // //子类
+            // function SubType(){
+            //     this.subProperty = false;
+            // }
+            // //子类继承父类
+            // SubType.prototype = new SuperType();
+            // SubType.prototype.getSubValue = function(){
+            //     return this.subProperty;
+            // }
+            // //获得子类的一个实例
+            // var instance = new SubType();
+            // //子类调用父类的方法
+            // alert(instance.getSuperValue());
+            
+            // 组合继承
+            // function SuperType(name){
+            //     this.name = name;
+            //     this.colors = ["red","yellow"];
+            // }
+            // SuperType.prototype.getSuperName = function(){
+            //     return this.name;
+            // }
+            // function SubType(name,age){
+            //     SuperType.call(this,name);
+            //     this.age = age;
+            // }
+            // SubType.prototype = new SuperType();
+            // SubType.prototype.constructor = SubType;
+            // SubType.prototype.sayAge = function(){
+            //     alert(this.age);
+            // }
+            // var instance1 = new SubType("xl",16);
+            // var instance2 = new SubType("qj",17);
+            // instance1.sayAge();
+            // instance1.colors.push("green");
+            // alert(instance1.colors);
+            // instance2.colors.push("black");
+            // alert(instance2.colors);
+
+            //Class的使用
+            // class Dog{
+            //     constructor(name,age){
+            //         this.name = name;
+            //         this.age = age;
+            //     }
+            //     getName() {
+            //         alert(this.name);
+            //     }
+            // }
+            // var dog1 = new Dog("2ha",16);
+            // alert(dog1.__proto__);
+
+            // var a = 13;
+            // console.log(a);
+            // alert();
+            // function newFun(){
+            //     alert(haha);
+                
+            // }
+            
+            // class SuperType{
+            //     constructor(age){
+            //         this.age = 16;
+            //     }
+            //     getName(){
+            //         alert('xl');
+            //     }
+            // }
+            // class SubType extends SuperType{
+            //     constructor(age){
+            //         this.age = 17;
+            //     }
+            //     getAge(){
+            //         alert(this.age);
+                    
+            //     }
+            // }
+            // let subObj = new SubType();
+            // let superObj = new SuperType();
+            
+            //窗口位置
+            
+            
+            var btn = document.getElementById("btn");
+            var num = 1;
+            btn.onclick = function(){
+                setInterval(function(){
+                    console.log(num++);
+                    
+                },250);
+            };
+        </script>
+    </body>
+
+</html>

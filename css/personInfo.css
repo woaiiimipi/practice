@@ -1,0 +1,42 @@
+input,textarea{
+    /* margin-right: 5%; */
+    margin-bottom: 5px;
+    height: 20px;
+    border:1px solid ;
+    border-color: coral;
+    border-radius:25px;
+    -moz-border-radius:25px; /* Old Firefox */
+    font-size: 1em;
+    transition:width 2s;
+    -moz-transition:width 2s; /* Firefox 4 */
+    -webkit-transition:width 2s; /* Safari and Chrome */
+    -o-transition:width 2s; /* Opera */
+    
+}
+
+label{
+    color: rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+form{
+    margin-right: 40%;
+    
+    text-align: right;
+}
+#logo{
+    text-align: center;
+}
+#duckyellow{
+    width: 8%;
+    height: 20%;
+}
+span{
+    font-size: 1.2em;
+}
+#submit{
+    width: 100px;
+    height: 40px;
+}
+
+
+
