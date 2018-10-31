@@ -1,31 +1,64 @@
 body {
   background-color: rgb(154, 219, 221);
 }
+/* 最上方导航栏 */
+nav {
+  height: 48px;
+  display: block;
+  /* text-align: center; */
+  border: 1px solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+}
+/* logo div */
 #logo {
-  display: block;
-  text-align: center;
-  left: auto;
-  right: auto;
+  display: inline;
+  position: absolute;
 }
-#searchdiv {
-  display: block;
-  text-align: center;
-  left: auto;
-  right: auto;
+/* logo image */
+#logo-img {
+  border-top-left-radius: 20px;
 }
+/* 导航按钮所在的ul */
 ul {
-  text-align: center;
+  display: inline;
+  /* 居中 */
+  position: absolute;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  /*去掉开头的点,序号等 */
   list-style-type: none;
   padding: 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
 }
+/* 导航按钮 */
 ul li {
   display: inline;
+  margin-left: 2px;
 }
+/* 搜索框和按钮 */
+#searchdiv {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+}
+#search-submit {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 0;
+}
+#searchdiv input {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 30px;
+  border: 1px solid;
+}
+/* 导航按钮的链接 */
 li a:link,
 a:visited {
-  margin-right: 2px;
+  /* margin-right: 2px; */
   font-weight: bold;
   color: #ffffff;
   background-color: #98bf21;
@@ -37,6 +70,7 @@ li a:hover,
 a:active {
   background-color: #7a991a;
 }
+/* iframe */
 iframe {
   width: 100%;
   height: 100%;
@@ -45,9 +79,14 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  height: 450px;
+  height: 600px;
   background-color: rgb(220, 234, 245);
-  box-shadow: 10px 10px 20px #998c8c;
+  /* 阴影 */
+  box-shadow: 20px 20px 20px #6e6b6b;
+  /* 边框 */
   border: 1px solid;
-  border-radius: 10px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 0;
 }

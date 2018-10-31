@@ -13,35 +13,48 @@
     <img id="duckyellow" src="../img/yellowduck.gif" alt="小黄鸭">
   </div>
   <form action="personInfo.html">
-    <label for="username">用户名:</label>
-    <input type="text" name="username" id="username" title="dsdfsd">
-    <br>
-    <label for="password">密&nbsp&nbsp&nbsp&nbsp码:</label>
-    <input type="password" name="password" id="password">
-    <br>
-    <label for="passwordrepeat">密码确认:</label>
-    <input type="password" name="passwordrepeat" id="passwordrepeat">
-    <br>
-    <label for="sex">性别:</label>
-    <label for="male"><input type="radio" id="male" name="sex">male</label>
-    <label for="female"><input type="radio" id="female" name="sex">female</label>
-    <br>
-    <label for="email">邮箱:</label>
-    <input type="email" name="email" id="email">
-    <br>
-    <label for="birthday">生日:</label>
-    <input type="date" name="birthday" id="birthday">
-    <br>
-    <label for="hobies">爱好:</label>
-    <label for="basketball"><input type="checkbox" name="hobies" id="basketball" value="basketball">basketball</label>
-    <label for="music"><input type="checkbox" name="hobies" id="music" value="music">music</label>
-    <label for="drawing"><input type="checkbox" name="hobies" id="drawing" value="drawing">drawing</label>
-    <label for="eat"><input type="checkbox" name="hobies" id="eat" value="eat">eat</label>
-    <br>
-    <label for="indroduce">自我介绍:</label>
-    <textarea name="indroduce" id="indroduce" rows="3"></textarea>
-    <br>
-    <input type="submit" value="submit" id="submit">
+    <div>
+      <label for="username" class="left-label">用户名:</label>
+      <input type="text" name="username" id="username" class="editable-input">
+    </div>
+    <div>
+      <label for="password" class="left-label">密&nbsp&nbsp&nbsp&nbsp码:</label>
+      <input type="password" name="password" id="password" class="editable-input">
+    </div>
+    <div>
+      <label for="passwordrepeat" class="left-label">密码确认:</label>
+      <input type="password" name="passwordrepeat" id="passwordrepeat" class="editable-input">
+    </div>
+    <div>
+      <label for="sex" id="sex-label" class="left-label">性别:</label>
+      <div class="options">
+        <label for="male" class="first-option-label"><input type="radio" id="male" name="sex">male</label>
+        <label for="female"><input type="radio" id="female" name="sex">female</label>
+      </div>
+      <label for="sex" name="empty-label">&nbsp</label>
+    </div>
+    <div>
+      <label for="email" class="left-label">邮箱:</label>
+      <input type="email" name="email" id="email" class="editable-input">
+    </div>
+    <div>
+      <label for="birthday" class="left-label">生日:</label>
+      <input type="date" name="birthday" id="birthday" class="editable-input">
+    </div>
+    <div>
+      <label for="hobies" class="left-label">爱好:</label>
+          <label for="basketball" class="first-option-lable"><input type="checkbox" name="hobies" id="basketball" value="basketball">basketball</label>
+          <label for="music"><input type="checkbox" name="hobies" id="music" value="music">music</label>
+          <label for="drawing"><input type="checkbox" name="hobies" id="drawing" value="drawing">drawing</label>
+    </div>
+    <div>
+      <label for="indroduce" class="left-label">自我介绍:</label>
+      <textarea name="indroduce" id="indroduce" rows="3"></textarea>
+    </div>
+
+    <div>
+      <input type="submit" value="SUBMIT" id="submit">
+    </div>
   </form>
   <hr>
 

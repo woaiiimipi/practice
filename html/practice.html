@@ -12,13 +12,10 @@
   <nav>
     <div id="logo">
       <a href="index.html" target="myFrame">
-        <img src="../img/grapecity.png" alt="logo">
+        <img id="logo-img" src="../img/grapecity.png" alt="logo">
       </a>
     </div>
-    <div id="searchdiv">
-      <input type="search">
-      <input type="button" value="搜索">
-    </div>
+    
     <ul>
       <li>
         <a href="personInfo.html" target="myFrame">
@@ -37,7 +34,12 @@
       </li>
     </ul>
   </nav>
-  <hr>
+  <div id="searchdiv">
+    <form action="">
+      <input type="search" id="search-editor">
+      <input type="submit" id="search-submit" value="搜索">
+    </form>
+  </div>
   <br>
   <div id="main">
     <iframe name="myFrame" src="index.html" frameborder="0" scrolling="no"></iframe>
