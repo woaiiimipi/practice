@@ -1,92 +1,300 @@
-body {
-  background-color: rgb(154, 219, 221);
+/* pc版本css */
+/* pc版本css */
+@media screen and (min-width: 750px) {
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    background-color: rgb(148, 216, 248);
+    margin: 0;
+
+    overflow-y: hidden;
+  }
+  /* 最上方导航栏 */
+  nav {
+    height: 48px;
+    display: block;
+    /* text-align: center; */
+    /* border: 1px solid; */
+    background-color: rgb(220, 234, 245);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0;
+
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+  }
+  /* logo div */
+  #logo {
+    display: inline;
+    position: absolute;
+  }
+  /* logo image */
+  #logo-img-pc {
+    border-top-left-radius: 20px;
+  }
+  #logo-img-mobile {
+    display: none;
+  }
+  /* 导航按钮所在的ul */
+  #pc-ul {
+    display: inline;
+    /* 居中 */
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    /*去掉开头的点,序号等 */
+    list-style-type: none;
+    padding: 0;
+  }
+  #mobile-ul {
+    display: none;
+  }
+  /* 导航按钮 */
+  ul li {
+    display: inline;
+    margin-left: 2px;
+    box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  /* 搜索框和按钮 */
+  #searchdiv {
+    top: 16px;
+    right: 2%;
+    position: absolute;
+  }
+  #search-submit {
+    background-color: rgb(123, 164, 240);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  #searchdiv input {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    height: 30px;
+    border: 1px solid;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  /* 移动端使用的列表图表 */
+  #list-div-img {
+    display: none;
+  }
+  /* 导航按钮的链接 */
+  li a:link,
+  a:visited {
+    /* margin-right: 2px; */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+  }
+  li a:hover,
+  a:active {
+    background-color: #7a991a;
+  }
+  .mobile-list-div {
+    display: none;
+  }
+  /* iframe */
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  #main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 80%;
+    background-color: rgb(220, 234, 245);
+    /* 阴影 */
+    box-shadow: 20px 20px 20px #6e6b6b;
+    /* 边框 */
+    /* border: 1px solid; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
 }
-/* 最上方导航栏 */
-nav {
-  height: 48px;
-  display: block;
-  /* text-align: center; */
-  border: 1px solid;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 0;
-}
-/* logo div */
-#logo {
-  display: inline;
-  position: absolute;
-}
-/* logo image */
-#logo-img {
-  border-top-left-radius: 20px;
-}
-/* 导航按钮所在的ul */
-ul {
-  display: inline;
-  /* 居中 */
-  position: absolute;
-  transform: translateX(-50%);
-  margin-left: 50%;
-  /*去掉开头的点,序号等 */
-  list-style-type: none;
-  padding: 0;
-}
-/* 导航按钮 */
-ul li {
-  display: inline;
-  margin-left: 2px;
-}
-/* 搜索框和按钮 */
-#searchdiv {
-  top: 20px;
-  right: 20px;
-  position: absolute;
-}
-#search-submit {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 0;
-}
-#searchdiv input {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  height: 30px;
-  border: 1px solid;
-}
-/* 导航按钮的链接 */
-li a:link,
-a:visited {
-  /* margin-right: 2px; */
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #98bf21;
-  text-align: center;
-  padding: 6px;
-  text-decoration: none;
-}
-li a:hover,
-a:active {
-  background-color: #7a991a;
-}
-/* iframe */
-iframe {
-  width: 100%;
-  height: 100%;
-}
-#main {
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  height: 600px;
-  background-color: rgb(220, 234, 245);
-  /* 阴影 */
-  box-shadow: 20px 20px 20px #6e6b6b;
-  /* 边框 */
-  border: 1px solid;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 0;
+
+/* 移动版本css */
+/* 移动版本css */
+
+@media screen and (max-width: 750px) {
+  html {
+    height: 100%;
+  }
+  body {
+    background-color: rgb(148, 216, 248);
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+  }
+  /* 最上方导航栏 */
+  nav {
+    height: 46px;
+    display: block;
+    /* text-align: center; */
+
+    background-color: rgb(220, 234, 245);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  /* logo div */
+  #logo {
+    display: inline;
+    position: absolute;
+  }
+  /* logo image */
+  #logo-img-pc {
+    display: none;
+  }
+
+  /* 导航按钮所在的ul */
+  #pc-ul {
+    display: none;
+  }
+  #mobile-ul {
+    display: none;
+  }
+  /* 搜索框和按钮 */
+  #searchdiv {
+    display: inline;
+    top: 7px;
+
+    /* 居中 */
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 50%;
+    background-color: rgb(220, 234, 245);
+  }
+  #search-submit {
+    outline: none;
+    background-color: rgb(123, 164, 240);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  #search-submit:active {
+    color: rgb(123, 164, 240);
+    background-color: white;
+  }
+  #searchdiv input {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    height: 30px;
+    border: 1px solid;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  /* 列表按钮 */
+
+  /* #list-div-img {
+    position: absolute;
+    float: right;
+    right: 20px;
+    top: 10px;
+    width: 40px;
+  }
+
+  #list-div :active #mobile-ul {
+    background-color: #98bf21;
+    display: block;
+  } */
+  /* 导航按钮的链接 */
+  li a:link,
+  a:visited {
+    /* margin-right: 2px; */
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+  }
+  /*   
+  li a:hover,
+  a:active {
+    background-color: #7a991a;
+
+  } */
+  /* iframe */
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  #main {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(220, 234, 245);
+    /* 阴影 */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* 边框 */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .mobile-list-div {
+    color: #ffffff;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+
+    /* 阴影 */
+    /* box-shadow: 5px 5px 16px 0px rgba(0, 0, 0, 0.2); */
+  }
+
+  #mobile-list-div-menu-icon {
+    padding: 9px;
+    font-size: 15px;
+    background-color: rgb(123, 164, 240);
+    /* 边框 */
+    border: 2px #ffffff solid;
+    outline: none;
+    /* 文字不能被选中 */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  .mobile-list-div-content {
+    display: none;
+    position: absolute;
+    background-color: #829dcf;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobile-list-div-content a {
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    border: #ffffff 0.5px solid;
+  }
+
+  .mobile-list-div:focus .mobile-list-div-content {
+    display: block;
+    
+  }
+  .item:hover{
+    background: #98bf21;
+  }
 }

@@ -10,13 +10,15 @@
 <body>
 
   <nav>
+
     <div id="logo">
       <a href="index.html" target="myFrame">
-        <img id="logo-img" src="../img/grapecity.png" alt="logo">
+        <img id="logo-img-pc" src="../img/grapecity.png" alt="logo">
+        <img id="logo-img-mobile" src="../img/grapemini.png" alt="logo">
       </a>
     </div>
-    
-    <ul>
+
+    <ul id="pc-ul">
       <li>
         <a href="personInfo.html" target="myFrame">
           个人信息
@@ -40,9 +42,20 @@
       <input type="submit" id="search-submit" value="搜索">
     </form>
   </div>
+  <!-- 移动端导航列表 -->
+  <div class="mobile-list-div" tabindex="1">
+    <div class="mobile-list-div-menu">
+      <span id="mobile-list-div-menu-icon">MENU</span>
+    </div>
+    <div class="mobile-list-div-content" >
+      <a href="personInfo.html" target="myFrame" class="mobile-list-item" tabindex="2">个人信息</a>
+      <a href="favarate.html" target="myFrame" class="mobile-list-item" tabindex="2">我的收藏</a>
+      <a href="activities.html" target="myFrame" class="mobile-list-item" tabindex="2">活动页面</a>
+    </div>
+  </div>
   <br>
   <div id="main">
-    <iframe name="myFrame" src="index.html" frameborder="0" scrolling="no"></iframe>
+    <iframe name="myFrame" src="personInfo.html" frameborder="0" scrolling="no"></iframe>
   </div>
 </body>
 

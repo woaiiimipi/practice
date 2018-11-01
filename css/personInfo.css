@@ -1,80 +1,180 @@
-input{
-    /* margin-right: 5%; */
-    margin-bottom: 5px;
-    height: 20px;
-    border:1px solid ;
-    border-color: coral;
-    border-radius:15px;
-    -moz-border-radius:15px; /* Old Firefox */
-    font-size: 1em;
-    transition:width 2s;
-    -moz-transition:width 2s; /* Firefox 4 */
-    -webkit-transition:width 2s; /* Safari and Chrome */
-    -o-transition:width 2s; /* Opera */
+@media screen and (min-width: 750px) {
+     input{
+        /* margin-right: 5%; */
+        margin-bottom: 5px;
+ 
+        border:1px solid ;
+        border-color: coral;
+        border-radius:15px;
+        -moz-border-radius:15px; /* Old Firefox */
+        font-size: 1em;
+        transition:width 2s;
+        -moz-transition:width 2s; /* Firefox 4 */
+        -webkit-transition:width 2s; /* Safari and Chrome */
+        -o-transition:width 2s; /* Opera */
+        
+    } 
     
+    
+    label{
+        color: rgb(0, 0, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form{
+        display: block;
+        transform: translateX(-50%);
+        text-align: right;
+        margin-left: 40%;
+    }
+    form div{
+        margin-bottom: 8px;
+        
+    }
+    /* 标签 */
+    label{
+        font-weight: 400;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    /* 可编辑的文本 */
+    .editable-input{
+        height: 30px;
+        width: 50%;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    /* 左侧标签 */
+    .left-label{
+        position: absolute;
+        right: 55%;
+        margin-top: 5px;
+    }
+    /* 第一个选项标签 */
+    .first-option-lable{
+        position: absolute;
+        left: 50%;
+        padding: 0;
+    }
+    /* 第二个选项标签 */
+    .second-option-lable{
+        left: 70%;
+        padding: 0;
+    }
+    /* 自我介绍文本域 */
+    #indroduce{
+        resize: none;
+        height: 50px;
+        width: 49%;
+    }
+    /* logo域 */
+    #logo{
+        text-align: center;
+    }
+    #duckyellow{
+        width: 8%;
+        height: 20%;
+    }
+    /* 提交按钮 */
+    #submit{
+        width: 100px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 750px) {
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        overflow: hidden;
+    }
+    input{
+        /* margin-right: 5%; */
+        margin-bottom: 1px;
+        border:1px solid ;
+        border-color: coral;
+        border-radius:15px;
+        -moz-border-radius:15px; /* Old Firefox */
+        font-size: 1em;
+        transition:width 2s;
+        -moz-transition:width 2s; /* Firefox 4 */
+        -webkit-transition:width 2s; /* Safari and Chrome */
+        -o-transition:width 2s; /* Opera */
+        
+    }
+    
+    
+    label{
+        color: rgb(0, 0, 0);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form{
+        display: block;
+        /* transform: translateX(-50%); */
+        text-align: right;
+        margin-right: 10%;
+    }
+    form div{
+        margin-bottom: 8px;
+    }
+    /* 标签 */
+    label{
+        font-weight: 20%;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* 可编辑的文本 */
+    .editable-input{
+        height: 5%;
+        width: 60%;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        border: 0px ;
+        outline: none;
+    }
+    /* 左侧标签 */
+    .left-label{
+        position: absolute;
+        right: 67%;
+        margin-top: 5px;
+        /* text-decoration: underline ; */
+        font-weight: 600;
+        
+    }
+    /* 第一个选项标签 */
+    .first-option-lable{
+        position: absolute;
+        left: 35%;
+        padding: 0;
+    }
+    /* 第二个选项标签 */
+    .second-option-lable{
+        left: 55%;
+        padding: 0;
+    }
+    /* 自我介绍文本域 */
+    #indroduce{
+        resize: none;
+        height: 50px;
+        width: 58%;
+    }
+    /* logo域 */
+    #logo{
+        text-align: center;
+    }
+    #duckyellow{
+        width: 15%;
+        height: 20%;
+    }
+    /* 提交按钮 */
+    #submit{
+        width: 100px;
+        height: 40px;
+    }
+
 }
 
-
-label{
-    color: rgb(0, 0, 0);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-form{
-    display: block;
-    transform: translateX(-50%);
-    text-align: right;
-    margin-left: 40%;
-}
-form div{
-    margin-bottom: 8px;
-    
-}
-/* 标签 */
-label{
-    font-weight: 400;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-}
-/* 可编辑的文本 */
-.editable-input{
-    height: 30px;
-    width: 50%;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-}
-/* 左侧标签 */
-.left-label{
-    position: absolute;
-    right: 55%;
-    margin-top: 5px;
-}
-/* 性别选项标签 */
-.options{
-    display: inline;
-    position: absolute;
-    left: 50%;
-    padding: 0;
-}
-/* 自我介绍文本域 */
-#indroduce{
-    resize: none;
-    height: 50px;
-    width: 49%;
-}
-/* logo域 */
-#logo{
-    text-align: center;
-}
-#duckyellow{
-    width: 8%;
-    height: 20%;
-}
-/* 提交按钮 */
-#submit{
-    width: 100px;
-    height: 40px;
-}
 
 
 
