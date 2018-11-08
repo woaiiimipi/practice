@@ -12,7 +12,12 @@
     overflow-y: hidden;
   }
   /* 最上方导航栏 */
+  .mobile-nav-row {
+    display: none;
+  }
   nav {
+    overflow: visible;
+    
     height: 48px;
     display: block;
     /* text-align: center; */
@@ -28,22 +33,38 @@
     margin-right: 1%;
     margin-top: 0.5%;
   }
+  .nav-row {
+    overflow: hidden;
+    width: 95%;
+    margin: auto;
+  }
+  .nav-col {
+    width: 33.33%;
+    float: left;
+  }
+
+
   /* logo div */
-  #logo {
+  /* #logo {
     display: inline;
     position: absolute;
-  }
+  } */
   /* logo image */
-  #logo-img-pc {
+  /* #logo-img-pc {
     border-top-left-radius: 20px;
-  }
+  } */
   #logo-img-mobile {
     display: none;
   }
   /* 导航按钮所在的ul */
+  #nav-menu {
+    text-align: center;
+    transform: translateY(-50%);
+    margin-top: 24px;
+  }
   #pc-ul {
     display: inline;
-    /* 居中 */
+    /* 居中
     position: absolute;
     transform: translateX(-50%);
     margin-left: 50%;
@@ -51,9 +72,9 @@
     list-style-type: none;
     padding: 0;
   }
-  #mobile-ul {
+  /* #mobile-ul {
     display: none;
-  }
+  } */
   /* 导航按钮 */
   ul li {
     display: inline;
@@ -61,10 +82,15 @@
     box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
   }
   /* 搜索框和按钮 */
-  #searchdiv {
-    top: 16px;
-    right: 2%;
-    position: absolute;
+  #nav-searchbox {
+    overflow: visible;
+    text-align: right;
+    transform: translateY(-50%);
+    margin-top: 24px;
+  }
+  #nav-searchbox-form {
+    margin-right: 10px;
+    overflow: visible;
   }
   #search-submit {
     background-color: rgb(123, 164, 240);
@@ -75,13 +101,19 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 0;
   }
-  #searchdiv input {
+  #nav-searchbox input {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     height: 30px;
-    border: 1px solid;
-    color: white;
+    border: 1px solid white;
+    background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  #search-tip{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-color: rgb(73, 53, 53);
   }
   /* 移动端使用的列表图表 */
   #list-div-img {
@@ -102,7 +134,7 @@
   a:active {
     background-color: #7a991a;
   }
-  .mobile-list-div {
+  .mobile-menu-items {
     display: none;
   }
   /* iframe */
@@ -141,53 +173,54 @@
     overflow: hidden;
   }
   /* 最上方导航栏 */
-  nav {
+  .nav-row {
+    display: none;
+  }
+  .mobile-nav-row {
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
     height: 46px;
     display: block;
     /* text-align: center; */
-
     background-color: rgb(220, 234, 245);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
-  /* logo div */
-  #logo {
-    display: inline;
-    position: absolute;
+  .mobile-nav-col {
+    float: left;
   }
-  /* logo image */
-  #logo-img-pc {
-    display: none;
+  #mobile-nav-logo {
+    width: 25%;
   }
-
+  #mobile-nav-searchbox {
+    width: 55%;
+    transform: translateY(-50%);
+    margin-top: 24px;
+  }
+  #mobile-nav-menu {
+    width: 20%;
+    transform: translateY(-50%);
+    margin-top: 24px;
+    text-align: center;
+  }
   /* 导航按钮所在的ul */
-  #pc-ul {
-    display: none;
-  }
-  #mobile-ul {
-    display: none;
-  }
-  /* 搜索框和按钮 */
-  #searchdiv {
-    display: inline;
-    top: 7px;
 
-    /* 居中 */
-    position: absolute;
-    transform: translateX(-50%);
-    margin-left: 50%;
+  /* 搜索框和按钮 */
+  #mobile-nav-searchbox {
+    top: 7px;
     background-color: rgb(220, 234, 245);
   }
-  #search-submit {
+  #mobile-search-submit {
     outline: none;
     background-color: rgb(123, 164, 240);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
   }
-  #search-submit:active {
+  #mobile-search-submit:active {
     color: rgb(123, 164, 240);
     background-color: white;
   }
-  #searchdiv input {
+  #mobile-nav-searchbox input {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     height: 30px;
@@ -199,20 +232,7 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
   }
-  /* 列表按钮 */
 
-  /* #list-div-img {
-    position: absolute;
-    float: right;
-    right: 20px;
-    top: 10px;
-    width: 40px;
-  }
-
-  #list-div :active #mobile-ul {
-    background-color: #98bf21;
-    display: block;
-  } */
   /* 导航按钮的链接 */
   li a:link,
   a:visited {
@@ -256,14 +276,13 @@
     position: absolute;
     top: 14px;
     right: 10px;
-
-    /* 阴影 */
-    /* box-shadow: 5px 5px 16px 0px rgba(0, 0, 0, 0.2); */
+    
   }
 
   #mobile-list-div-menu-icon {
     padding: 9px;
     font-size: 15px;
+    color: white;
     background-color: rgb(123, 164, 240);
     /* 边框 */
     border: 2px #ffffff solid;
@@ -292,9 +311,8 @@
 
   .mobile-list-div:focus .mobile-list-div-content {
     display: block;
-    
   }
-  .item:hover{
+  .item:hover {
     background: #98bf21;
   }
 }

@@ -8,46 +8,71 @@
 </head>
 
 <body>
-
-  <nav>
-
-    <div id="logo">
+  <!-- pc端导航栏 -->
+  <nav class="nav-row">
+    <div class="nav-col" id="nav-logo">
+      <div id="logo">
+        <a href="index.html" target="myFrame" aria-expanded="true">
+          <img id="logo-img-pc" src="../img/grapecity.png" alt="logo">
+          <img id="logo-img-mobile" src="../img/grapemini.png" alt="logo">
+        </a>
+      </div>
+    </div>
+    <div class="nav-col" id="nav-menu">
+      <ul id="pc-ul">
+        <li>
+          <a href="personInfo.html" target="myFrame">
+            个人信息
+          </a>
+        </li>
+        <li>
+          <a href="favarate.html" target="myFrame">
+            我的收藏
+          </a>
+        </li>
+        <li>
+          <a href="activities.html" target="myFrame">
+            活动页面
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-col" id="nav-searchbox">
+      <form action="" id="nav-searchbox-form">
+        <input type="search" id="search-editor" list="data_list1" autocomplete="off">
+        <datalist class="data_list" id="data_list1">
+        </datalist>
+        <input type="submit" id="search-submit" value="搜索">
+      </form>
+    </div>
+  </nav>
+  <!-- 移动端导航栏 -->
+  <nav class="mobile-nav-row">
+    <div class="mobile-nav-col" id="mobile-nav-logo">
       <a href="index.html" target="myFrame">
-        <img id="logo-img-pc" src="../img/grapecity.png" alt="logo">
-        <img id="logo-img-mobile" src="../img/grapemini.png" alt="logo">
+        <img id="mobile-logo-img" src="../img/grapemini.png" alt="logo">
       </a>
     </div>
-
-    <ul id="pc-ul">
-      <li>
-        <a href="personInfo.html" target="myFrame">
-          个人信息
-        </a>
-      </li>
-      <li>
-        <a href="favarate.html" target="myFrame">
-          我的收藏
-        </a>
-      </li>
-      <li>
-        <a href="activities.html" target="myFrame">
-          活动页面
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div id="searchdiv">
-    <form action="">
-      <input type="search" id="search-editor">
-      <input type="submit" id="search-submit" value="搜索">
-    </form>
-  </div>
-  <!-- 移动端导航列表 -->
-  <div class="mobile-list-div" tabindex="1">
-    <div class="mobile-list-div-menu">
-      <span id="mobile-list-div-menu-icon">MENU</span>
+    <div class="mobile-nav-col" id="mobile-nav-searchbox">
+      <form action="" id="mobile-nav-searchbox-form">
+        <input type="search" id="mobile-search-editor" list="data_list2" />
+        <datalist class="data_list" id="data_list2">
+        </datalist>
+        <input type="submit" id="mobile-search-submit" value="搜索">
+      </form>
     </div>
-    <div class="mobile-list-div-content" >
+    <div class="mobile-nav-col" id="mobile-nav-menu">
+      <div class="mobile-list-div-menu">
+        <span id="mobile-list-div-menu-icon">MENU</span>
+      </div>
+    </div>
+  </nav>
+  <div id="mobile-nav-item">
+
+  </div>
+
+  <div class="mobile-menu-items" tabindex="1">
+    <div class="mobile-list-div-content">
       <a href="personInfo.html" target="myFrame" class="mobile-list-item" tabindex="2">个人信息</a>
       <a href="favarate.html" target="myFrame" class="mobile-list-item" tabindex="2">我的收藏</a>
       <a href="activities.html" target="myFrame" class="mobile-list-item" tabindex="2">活动页面</a>
@@ -57,6 +82,7 @@
   <div id="main">
     <iframe name="myFrame" src="personInfo.html" frameborder="0" scrolling="no"></iframe>
   </div>
+  <script src="../js/practice.js"></script>
 </body>
 
 </html>

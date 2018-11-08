@@ -1,0 +1,188 @@
+var str2 = "YouCan3You8Up,no can no bibi!";
+        var reg = /^[0-9a-zA-Z]{1,}$/;
+        console.log(reg.test(str2));
+        //正则表达式的一般形式
+        //正则表达式对象的创建：
+        //var 对象名 = new RegExp(参数1，参数2);
+        //参数1：匹配规则,必须是字符串
+        //参数2：可以省略，(属性)可选值，用来设置匹配规则的范围
+        //第一种方式
+        //判断字符串中是否包含某子字符串
+        var str3 = "abcd";
+        var reg2 = new RegExp("ab");
+        console.log(reg2.test(str3)); //成功:true 不成功:false
+        //想匹配字符串，必须使用正则表达式的函数 
+        //test(字符串)函数作用：用来判断该字符串是否满足正则表达式的规则，如果满足，则返回true，如果不满足，则返回false
+        //创建正则表达式的最常用方式 - 第二种方式
+        //var 对象名 = /参数1/参数2；
+        //参数1：设置匹配规则
+        //参数2：属性(可选值)，设置匹配规则的范围
+        var str4 = "youbd";
+        //判断 /mn/ 是否包含自字符串mn
+        var reg3 = /ou/;
+        console.log(reg3.test(str4));
+        //参数2：属性(有三个值)
+        //i:不区分字母大小写去匹配;
+        //g:全局搜索：即便匹配到对应的内容，也会继续匹配，直到字符串结束位置
+        //m:多行搜索
+        var reg4 = /jingdong/i;
+        console.log(reg4.test("JingDongShangCheng"));
+        //匹配规则
+        //1.普通的字符匹配股则
+        //      /12/ /ab/ /ac8/...
+        //2.特殊字符
+        //      \n 换行
+        //      \t 切换符号 tab键
+        //      \r 回车键 enter键
+        //      \d 数字 0-9 或者 [0123456789]
+        //      \D 非数字 或者 [^0123456789]
+        //      \w 字母，数字，下划线，汉字 
+        //      \W 非(字母，数字，下划线，汉字)之外的
+        //      \s 空白(空格，换行，tab切换键)
+        //      \S 非空白
+        //      .  除了\n之外的其他字符 或者 [^\n]
+        //      [] 用来匹配字符串中是否出现过[]中的字符，如果出现，为true，不出现,为false
+        //      [^] 用来匹配除了[]中出现的字符
+        var reg5 = /\n/;
+        var str5 = "LaMo\nSi";
+        console.log(reg5.test(str5));
+        var reg6 = /\d/; //以数字开头
+        console.log(reg6.test("007t7"));
+        var reg7 = /\D/;
+        console.log(reg7.test("3403l"));
+        var reg8 = /\w/;
+        console.log(reg8.test("$-@9"));
+        var reg9 = /\W/;
+        console.log(reg9.test("$-@9"));
+        var reg10 = /\s/;
+        console.log(reg10.test("longgui lamosi"));
+        var reg11 = /\S/;
+        console.log(reg11.test("longguilamosi"));
+        var reg12 = /[ab]/; //判断字符串中是否出现过任意一个字符(a,b,ab),出现，则为true，反之，为false
+        console.log(reg12.test("dafbcd"));
+        //特殊字符对应的正则表达式
+        //      1.选字符 - 用于指定字符串的范围 例如：[0-9] 即匹配0 到 9 的数字;
+        //                                      [a-z] 即匹配所有的小写字母;
+        //                                      [A-Z] 即匹配所有的大写字母;
+        var reg13 = /[a-z0-9A-Z]/g;
+        console.log(reg13.test("aii9B"));
+        //      match(正则表达式) 函数
+        //      作用:用来匹配该字符串中是否有符合规则的字符串，返回值是一个数组，每个字符串作为数组的一个元素
+        var str13 = "A*99abcY0B49L";
+        var arr = str13.match(reg13);
+        console.log(arr);
+        var str14 = "*abc99!@a3ab";
+        var reg14 = /ab/g;
+        var arr2 = str14.match(reg14);
+        console.log(arr2);
+        //      search(正则表达式) 函数
+        //      作用：只要匹配到符合规则的字符串就会将该字符串的开始下标返回，反之，返回-1
+        var str15 = "youabcdY90we";
+        var result = str15.search(/ab/);
+        console.log(result);
+        var str16 = "you can you up,no can no bibi!";
+        console.log(str16.split(""));
+        console.log(str16.split("o"));
+        //正则表达式匹配作为分割符号
+        console.log(str16.split(/[ao]/));
+        var str17 = "1362388064@qq.com";
+        console.log(str17.split(/\./)); // \.转义字符
+        //以 . 或者 @ 作为分隔符
+        console.log(str17.split(/[@.]/));
+        console.log(str17.split(/[@\.]/));
+        //替换 replace(正则表达式,字符串)
+        var str18 = "no zuo no dai";
+        console.log(str18.replace(/o/g, "L"));
+        console.log(str18.replace(/[no]/g, "B"));
+        //正则表达式里的量词
+        //      1.{n} 重复出现至少n次
+        //      2.{m,n} 重复出现 m 到 n 次
+        //      3. + 匹配 相当于{1,} 1到无穷大
+        //      4. * 相当于{0,} 0到无穷大
+        //      5. ? 相当于{0,1} 0-1 可有可无
+        var str19 = "aasdfghjklzxcvb";
+        //var reg19 = /a{2}/g;
+        //var reg19 = /a{1,}/g;
+        //var reg19 = /a{3,6}/;
+        //var reg19 = /a+/;
+        //var reg19 = /a*/;
+        var reg19 = /a?/g;
+        console.log(reg19.test(str19));
+        var str20 = "youaabcad";
+        console.log(str20.replace(/a?/, "A"));
+        console.log(str20.replace(/a?/g, "A"));
+        //判断邮政编码(字符串是否满足邮政编码)
+        //六位数，并且全部是数字
+        var email = "450000";
+        //第一种形式
+        //      var regEmail = /^\d{6}$/g;
+        //第二种形式
+        var regEmail = /^[0-9]\d{5}$/g;
+        console.log(regEmail.test(email));
+        //      2.定位符 例如:1.^ 以某某为开头 $ 以某某为结尾
+        //2.\b :匹配到单词的边界
+        var str21 = "abcde";
+        //      var reg21 = /^abc/;//以abc为开头
+        //      var reg21 = /^[abc]/;//以a或b或c为开头
+        var reg21 = /[^abc]/; //除了a或b或c之外的字符
+        console.log(reg21.test(str21));
+        var str22 = "mouse money eye see";
+        // \b + 单词 (匹配到单词前边界的mo)
+        console.log(str22.match(/\bmo/g));
+        // 单词 + \b (匹配到单词后边界的ey)
+        console.log(str22.match(/ey\b/g));
+        //练习：判断一个字符串是否符合电话号码
+        var phoneNum = "13849007907";
+        var regPhone = /^1[34578]\d{9}$/;
+        console.log(regPhone.test(phoneNum));
+        //判断是否包含汉字
+        var word = "longgui拉莫斯";
+        var regWord = /[\u4e00-\u9fa5]+/g;
+        console.log(regWord.test(word));
+        //判断身份证号码 18位
+        var num = "410184199504300000";
+        var regNum = /^[1-9]\d{16}[\d|x]$/;
+         
+        //"^\d+$"　　//非负整数（正整数 + 0）
+        //"^[0-9]*[1-9][0-9]*$"　　//正整数
+        //"^((-\d+)|(0+))$"　　//非正整数（负整数 + 0）
+        //"^-[0-9]*[1-9][0-9]*$"　　//负整数
+        //"^-?\d+$"　　　　//整数
+        //"^\d+(\.\d+)?$"　　//非负浮点数（正浮点数 + 0）
+        //"^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$"　　//正浮点数
+        //"^((-\d+(\.\d+)?)|(0+(\.0+)?))$"　　//非正浮点数（负浮点数 + 0）
+        //"^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$"　　//负浮点
+        //数
+        //"^(-?\d+)(\.\d+)?$"　　//浮点数
+        //"^[A-Za-z]+$"　　//由26个英文字母组成的字符串
+        //"^[A-Z]+$"　　//由26个英文字母的大写组成的字符串
+        //"^[a-z]+$"　　//由26个英文字母的小写组成的字符串
+        //"^[A-Za-z0-9]+$"　　//由数字和26个英文字母组成的字符串
+        //"^\w+$"　　//由数字、26个英文字母或者下划线组成的字符串
+        //"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$"　　　　//email地址
+        //"^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$"　　//url
+        ///^13\d{9}$/gi手机号正则表达式
+        /*
+ 
+        //判断是不是正数
+        /^\d{1,}$/
+ 
+        //判断QQ号 5到11位的QQ号
+        /^[1-9]\d{4,10}$/
+ 
+        //判断是不是整数（正负整数）
+        /^\-{0,1}\d{1,}$/
+ 
+        //或者
+        /^\-?\d+$/
+ 
+        //小数
+        /^\-?\d+\.\d+$/
+        */
+        //分组符号
+        //();
+        ///nba{2}/g  ---- nbaa 子字符串
+        ///(nba){2}/g ----- nbanba 子字符串
+        ///n(ba){2}/g ----- nbaba 子字符串
+        ///[nba]{2}/g ----- 任意包含两个字符(aa bb nn
+        //nb na ba)

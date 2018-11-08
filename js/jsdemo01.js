@@ -1,6 +1,9 @@
-<script>
+function sayHello() {
+  alert("hello js!");
+}
+let btn = document.getElementById("");
 
-    function sayHello(){
-        alert("hello js!")
-    }
-</script>
+sayHello();
+
+
+

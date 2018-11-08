@@ -9,61 +9,107 @@
 </head>
 
 <body>
-  <div id="logo">
-    <img id="duckyellow" src="../img/yellowduck.gif" alt="小黄鸭">
+  <div class="logo">
+    <img class="duckyellow" src="../img/yellowduck.gif" alt="小黄鸭">
   </div>
-  <form action="personInfo.html">
+  <form action="personInfo.html" id="form">
     <div>
-      <label for="username" class="left-label">用户名:</label>
-      <input type="text" name="username" id="username" class="editable-input">
-    </div>
-    <div>
-      <label for="password" class="left-label">密&nbsp&nbsp&nbsp&nbsp码:</label>
-      <input type="password" name="password" id="password" class="editable-input">
-    </div>
-    <div>
-      <label for="passwordrepeat" class="left-label">密码确认:</label>
-      <input type="password" name="passwordrepeat" id="passwordrepeat" class="editable-input">
-    </div>
-    <div>
-      <label for="sex" id="sex-label" class="left-label">性别:</label>
-      <div class="options">
-        <label for="male" class="first-option-lable"><input  type="radio" id="male" name="sex">male</label>
-        <label for="female" class="second-option-lable"><input type="radio" id="female" name="sex">female</label>
+      <!-- 用户名 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="username">用户名:</label>
+        </div>
+        <div class="right-input">
+          <input type="text" name="username" id="username" class="editable-input" reg="/^[a-z0-9_]+$/i" check-event="input;blur"
+            error-text="用户名输入不合法" tip-span-id="tip_username" valid = "false">
+            <span class="tip" id="tip_username"></span>
+        </div>
       </div>
+      <!-- 密码 -->
 
-    </div>
-    <div>
-      <label for="email" class="left-label">邮箱:</label>
-      <input type="email" name="email" id="email" class="editable-input">
-    </div>
-    <div>
-      <label for="birthday" class="left-label">生日:</label>
-      <input type="date" name="birthday" id="birthday" class="editable-input">
-    </div>
-    <div>
-      <label for="hobies" class="left-label">爱好:</label>
-      <div>
-        <label for="basketball" class="first-option-lable"><input class="hobies" type="checkbox" name="hobies" id="basketball"
-            value="basketball">basketball</label>
-        <label for="music" class="second-option-lable"><input type="checkbox" class="hobies" name="hobies" id="music" value="music">music</label>
+      <div class="row">
+        <div class="left-labal">
+          <label for="password">密&nbsp&nbsp&nbsp&nbsp码:</label>
+        </div>
+        <div class="right-input">
+          <input type="password" name="password" id="password" class="editable-input" reg="/^.{6,20}$/" check-event="input;blur"
+            error-text="密码输入不合法" tip-span-id="tip_password" valid = "false">
+          <span class="tip" id="tip_password"></span>
+        </div>
       </div>
-      <div>
-        <label for="drawing" class="first-option-lable"><input  type="checkbox" class="hobies" name="hobies" id="drawing" value="drawing">drawing</label>
-        <label for="eating" class="second-option-lable"><input type="checkbox" class="hobies" name="hobies" id="eating" value="eating">eating</label>
+      <!-- 密码确认 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="passwordrepeat">密码确认:</label>
+        </div>
+        <div class="right-input">
+          <input type="password" name="passwordrepeat" id="passwordrepeat" class="editable-input" compare-input-id="password"
+            error-text="密码不一致" check-event="input;blur" tip-span-id="tip_passwordrepeat" valid = "false">
+          <span class="tip" id="tip_passwordrepeat"></span>
+        </div>
       </div>
-    </div>
-    <div>
-      <label for="indroduce" class="left-label">自我介绍:</label>
-      <textarea name="indroduce" id="indroduce" rows="3"></textarea>
+      <!-- 性别 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="sex" id="sex-label">性别:</label>
+        </div>
+        <div class="right-input">
+          <label for="male" class="option"><input type="radio" id="male" name="sex">male</label>
+          <label for="female" class="option"><input type="radio" id="female" name="sex">female</label>
+        </div>
+      </div>
+      <!-- 邮箱 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="email">邮箱:</label>
+        </div>
+        <div class="right-input">
+          <input type="email" name="email" id="email" class="editable-input" reg="/^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/"
+            check-event="input;blur" error-text="邮箱输入不合法" tip-span-id="tip_email" valid = "false">
+            <span id="tip_email" class="tip"></span>
+        </div>
+      </div>
+      <!-- 生日 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="birthday">生日:</label>
+        </div>
+        <div class="right-input">
+          <input type="date" name="birthday" id="birthday" class="editable-input">
+        </div>
+      </div>
+      <!-- 爱好 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="hobies">爱好:</label>
+        </div>
+        <div class="right-input">
+          <label for="ball" class="option"><input class="hobies" type="checkbox" name="hobies" id="ball" value="ball">ball</label>
+          <label for="music" class="option"><input type="checkbox" class="hobies" name="hobies" id="music" value="music">music</label>
+          <label for="drawing" class="option"><input type="checkbox" class="hobies" name="hobies" id="drawing" value="drawing">drawing</label>
+          <label for="eating" class="option"><input type="checkbox" class="hobies" name="hobies" id="eating" value="eating">eating</label>
+        </div>
+      </div>
+      <!-- 自我介绍 -->
+      <div class="row">
+        <div class="left-labal">
+          <label for="indroduce">自我介绍:</label>
+        </div>
+        <div class="right-input">
+          <textarea name="indroduce" class="indroduce" rows="3"></textarea>
+        </div>
+      </div>
+      <!-- 提交 -->
+      <div class="form-submit-div">
+        <input type="submit" value="SUBMIT" class="submit" id="submit" disabled = "true" wrong-number = "0">
+      </div>
     </div>
 
-    <div>
-      <input type="submit" value="SUBMIT" id="submit">
-    </div>
   </form>
   <hr>
+  <script src="../js/personInfo.js">
 
+  </script>
 </body>
 
 </html>
